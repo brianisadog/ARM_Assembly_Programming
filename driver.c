@@ -7,16 +7,17 @@ int find_max_c(int *, int);
 int find_max_s(int *, int);
 int fib_iter_c(int);
 int fib_iter_s(int);
+int fib_rec_c(int);
 
 void test_sum_array();
 void test_find_max();
-void test_fib_iter();
+void test_fib();
 
 int main(int argc, char **argv) {
 
     test_sum_array();
     test_find_max();
-    test_fib_iter();
+    test_fib();
     
     return 0;
 }
@@ -90,33 +91,18 @@ void test_find_max() {
     printf("find_max_s(*large_set, 1001) = %d\n", max);
 }
 
-void test_fib_iter() {
+void test_fib() {
     int n, result;
 
     printf("\n");
-    printf("fib_iter:\n");
+    printf("fib_iter/fib_rec:\n");
 
-    n = 5;
-    result = fib_iter_c(n);
-    printf("fib_iter_c(%d) = %d\n", n, result);
-    result = fib_iter_s(n);
-    printf("fib_iter_s(%d) = %d\n", n, result);
-
-    n = 1;
-    result = fib_iter_c(n);
-    printf("fib_iter_c(%d) = %d\n", n, result);
-    result = fib_iter_s(n);
-    printf("fib_iter_s(%d) = %d\n", n, result);
-    
-    n = 10;
-    result = fib_iter_c(n);
-    printf("fib_iter_c(%d) = %d\n", n, result);
-    result = fib_iter_s(n);
-    printf("fib_iter_s(%d) = %d\n", n, result);
-    
-    n = 20;
-    result = fib_iter_c(n);
-    printf("fib_iter_c(%d) = %d\n", n, result);
-    result = fib_iter_s(n);
-    printf("fib_iter_s(%d) = %d\n", n, result);
+    for (n = 0; n <= 20; n++) {
+        result = fib_iter_c(n);
+        printf("fib_iter_c(%d) = %d\n", n, result);
+        result = fib_iter_s(n);
+        printf("fib_iter_s(%d) = %d\n", n, result);
+        result = fib_rec_c(n);
+        printf("fib_rec_c(%d) = %d\n", n, result);
+    }
 }

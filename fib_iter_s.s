@@ -2,8 +2,8 @@
 .func fib_iter_s
 
 fib_iter_s:
-        cmp r0, #0      /* if (n == 0) */
-        beq return
+        cmp r0, #0      /* if (n <= 0) */
+        ble return
         mov r1, #0      /* int temp = 0 */
         mov r2, #0      /* int a = 0 */
         mov r3, #1      /* int b = 1 */
