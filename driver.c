@@ -5,14 +5,17 @@ int sum_array_c(int *, int);
 int sum_array_s(int *, int);
 int find_max_c(int *, int);
 int find_max_s(int *, int);
+int fib_iter_c(int);
 
 void test_sum_array();
 void test_find_max();
+void test_fib_iter();
 
 int main(int argc, char **argv) {
 
     test_sum_array();
     test_find_max();
+    test_fib_iter();
     
     return 0;
 }
@@ -84,4 +87,27 @@ void test_find_max() {
     printf("find_max_c(*large_set, 1001) = %d\n", max);
     max = find_max_s(large_set, 1001);
     printf("find_max_s(*large_set, 1001) = %d\n", max);
+}
+
+void test_fib_iter() {
+    int n, result;
+
+    printf("\n");
+    printf("fib_iter:\n");
+
+    n = 5;
+    result = fib_iter_c(n);
+    printf("fib_iter_c(%d) = %d\n", n, result);
+
+    n = 1;
+    result = fib_iter_c(n);
+    printf("fib_iter_c(%d) = %d\n", n, result);
+
+    n = 10;
+    result = fib_iter_c(n);
+    printf("fib_iter_c(%d) = %d\n", n, result);
+    
+    n = 20;
+    result = fib_iter_c(n);
+    printf("fib_iter_c(%d) = %d\n", n, result);
 }
