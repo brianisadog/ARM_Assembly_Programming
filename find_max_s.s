@@ -10,7 +10,7 @@ loop:
         ldr r12, [r0, r3, lsl #2]
         cmp r12, r2
         movgt r2, r12
-        add r3, #1
+        add r3, r3, #1
         b loop
 loop_end:
         mov r0, r2
