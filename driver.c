@@ -6,6 +6,7 @@ int sum_array_s(int *, int);
 int find_max_c(int *, int);
 int find_max_s(int *, int);
 int fib_iter_c(int);
+int fib_iter_s(int);
 
 void test_sum_array();
 void test_find_max();
@@ -98,16 +99,24 @@ void test_fib_iter() {
     n = 5;
     result = fib_iter_c(n);
     printf("fib_iter_c(%d) = %d\n", n, result);
+    result = fib_iter_s(n);
+    printf("fib_iter_s(%d) = %d\n", n, result);
 
     n = 1;
     result = fib_iter_c(n);
     printf("fib_iter_c(%d) = %d\n", n, result);
-
+    result = fib_iter_s(n);
+    printf("fib_iter_s(%d) = %d\n", n, result);
+    
     n = 10;
     result = fib_iter_c(n);
     printf("fib_iter_c(%d) = %d\n", n, result);
+    result = fib_iter_s(n);
+    printf("fib_iter_s(%d) = %d\n", n, result);
     
     n = 20;
     result = fib_iter_c(n);
     printf("fib_iter_c(%d) = %d\n", n, result);
+    result = fib_iter_s(n);
+    printf("fib_iter_s(%d) = %d\n", n, result);
 }
