@@ -8,6 +8,7 @@ int find_max_s(int *, int);
 int fib_iter_c(int);
 int fib_iter_s(int);
 int fib_rec_c(int);
+int fib_rec_s(int);
 
 void test_sum_array();
 void test_find_max();
@@ -104,5 +105,7 @@ void test_fib() {
         printf("fib_iter_s(%d) = %d\n", n, result);
         result = fib_rec_c(n);
         printf("fib_rec_c(%d) = %d\n", n, result);
+        result = fib_rec_s(n);
+        printf("fib_rec_s(%d) = %d\n", n, result);
     }
 }
