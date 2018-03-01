@@ -11,15 +11,22 @@ int fib_rec_c(int);
 int fib_rec_s(int);
 int find_str_c(char *, char*);
 int find_str_s(char *, char *);
+void tower_c(int, char, char, char);
 void test_sum_array_and_find_max();
 void test_fib_iter_and_fib_rec();
 void test_find_str();
+void test_tower(int);
 
 int main(int argc, char **argv) {
 
     test_sum_array_and_find_max();
     test_fib_iter_and_fib_rec();
     test_find_str();
+
+    test_tower(2);
+    test_tower(3);
+    test_tower(4);
+    test_tower(5);
     
     return 0;
 }
@@ -143,4 +150,11 @@ void test_find_str() {
     printf("find_str_c(\"Computer Science is actually art!\", \"art?\") = %d\n", result);
     result = find_str_s(s, sub);
     printf("find_str_s(\"Computer Science is actually art!\", \"art?\") = %d\n", result);
+}
+
+void test_tower(int n) {
+    printf("\n");
+    printf("tower_c wiht %d disks:\n", n);
+
+    tower_c(n, 'A', 'B', 'C');
 }
