@@ -21,6 +21,10 @@ int find_str_c(char *s, char *sub) {
             if (*pointer_sub == '\0') {
                 result = j;
             }
+            else {
+                s -= 1;
+                i -= 1;
+            }
         }
         s += 1;
         i += 1;

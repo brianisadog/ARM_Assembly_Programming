@@ -35,7 +35,12 @@ inner_loop:
 inner_loop_end:
         ldr r2, [sp, #12]       /* read j from stack #12 into r2 */
         cmp r3, #0              /* if (*pointer_sub == '\0') */
-        streq r2, [sp, #8]      /* update result on stack #8 with j */
+        bne not_end_of_sub
+        str r2, [sp, #8]        /* update result on stack #8 with j */
+        b outer_loop_end
+not_end_of_sub:
+        sub r0, r0, #1
+        sub r12, r12, #1
 not_match:
         add r0, r0, #1
         add r12, r12, #1

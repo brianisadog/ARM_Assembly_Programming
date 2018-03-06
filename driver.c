@@ -140,7 +140,6 @@ void test_find_str() {
     result = find_str_s(s, sub);
     printf("find_str_s(\"Computer Science is actually art!\", \"Computer Science\") = %d\n", result);
     
-
     sub = "not an art";
     result = find_str_c(s, sub);
     printf("find_str_c(\"Computer Science is actually art!\", \"not an art\") = %d\n", result);
